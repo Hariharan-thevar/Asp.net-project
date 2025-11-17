@@ -4,7 +4,7 @@
 }
 <h2>Catalog</h2>
 <form method="get" class="mb-3">
-  <input name="q" class="form-control" placeholder="Search..." value="@Request.Query["q"]" />
+  <input name="q" class="form-control" placeholder="Search..." value="@(ViewContext.HttpContext.Request.Query[\"q\"].ToString())" />
 </form>
 <div class="row">
 @foreach(var p in Model){
